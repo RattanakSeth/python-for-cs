@@ -1,0 +1,11 @@
+[
+    {
+        "id": 22,
+        "name": "Rattanak",
+        "age": 23,
+        "department": {
+            "id": "CADT_IDT620",
+            "name": "DER"
+        }
+    }
+]
