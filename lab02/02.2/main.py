@@ -7,28 +7,12 @@ Write a program in Java to manage student by using Student Class:
     - display()
 """
 
-class Student:
-    def __init__(self, id: int, name: str, age: int) -> None:
-        self.id = id
-        self.name = name
-        self.age = age
-    
-    def get_name(self):
-        return self.name
-    
-    def setValues(self, id, name, age) -> None:
-        self.id = id
-        self.name = name
-        self.age = age
-
-    def display(self):
-        print("| {:<6} | {:<14} | {:<4} |".format(self.id, self.name, self.age))
-
-
+from student import Student
+from services import write_a_student_to_json, read_students_from_json
 
 class Menu:
     def __init__(self) -> None:
-        self.students: list(Student) = []
+        self.students: list(Student) = read_students_from_json()
 
 
     def create_student(self):
@@ -37,7 +21,9 @@ class Menu:
         id: int = int(input("Student's Id:"))
         name: str = str(input("Student's name:"))
         age: int = int(input("Student's age:"))
+        # student = Student(id, name, age)
         self.students.append(Student(id, name, age))
+        write_a_student_to_json(self.students)
         print("A student is added to the list\n")
 
     def student_lists(self):

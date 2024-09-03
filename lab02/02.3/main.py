@@ -1,4 +1,5 @@
 from student import Student
+from services import write_a_student_to_json, read_students_from_json
 
 """
 02.3 Student management
@@ -7,20 +8,22 @@ Write a program to allow user to manage a list of student
 
 class Menu:
     def __init__(self) -> None:
-        self.students: list(Student) = [
-            Student(1, "Rattanak SETH", 27),
-            Student(2, "Thearin", 15),
-            Student(3, "Senghouy", 19)
-        ]
+        self.students: list(Student) = read_students_from_json()
+        # [
+        #     Student(1, "Rattanak SETH", 27),
+        #     Student(2, "Thearin", 15),
+        #     Student(3, "Senghouy", 19)
+        # ]
 
 
     def create_student(self):
         print("Please input student info:")
         print("Student #%d" %(len(self.students)+1))
-        id: int = int(input("Student's Id:"))
+        id: int = len(self.students) + 1 #int(input("Student's Id:"))
         name: str = str(input("Student's name:"))
         age: int = int(input("Student's age:"))
         self.students.append(Student(id, name, age))
+        write_a_student_to_json(self.students)
         print("A student is added to the list\n")
 
     def student_lists(self):
@@ -40,6 +43,7 @@ class Menu:
             for idx, stu in enumerate(self.students):
                 if (stu.id == id):
                     del self.students[idx]
+                    write_a_student_to_json(self.students)
                     print("The following student has been deleted")
                     print("| {:<6} | {:<14} | {:<4} |".format(stu.id, stu.name, stu.age))
                     isDeleted = True
