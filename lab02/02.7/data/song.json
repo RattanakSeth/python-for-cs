@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Tov na oun srey",
+        "singer": "Meas Saly",
+        "length": "33",
+        "price": "1",
+        "album": 1
+    },
+    {
+        "name": "Hat tae ke laor",
+        "singer": "Unknown",
+        "length": "34mn",
+        "price": "22$",
+        "album": 1
+    },
+    {
+        "name": "Hat avey oun oy bong tov ke",
+        "singer": "The man of the man",
+        "length": "2mn",
+        "price": "33$",
+        "album": 2
+    }
+]

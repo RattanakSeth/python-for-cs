@@ -1,0 +1,38 @@
+[
+    {
+        "ISBN": "0671027034",
+        "title": "How to Win Friends & Influence People",
+        "price": 10.29,
+        "author": "Dale Carnegie"
+    },
+    {
+        "ISBN": "0743273567",
+        "title": "The Great Gatsby",
+        "price": 15.99,
+        "author": "F. Scott Fitzgerald"
+    },
+    {
+        "ISBN": "0451524934",
+        "title": "1984",
+        "price": 9.99,
+        "author": "George Orwell"
+    },
+    {
+        "ISBN": "0316769487",
+        "title": "The Catcher in the Rye",
+        "price": 12.49,
+        "author": "J.D. Salinger"
+    },
+    {
+        "ISBN": "0061120081",
+        "title": "To Kill a Mockingbird",
+        "price": 14.99,
+        "author": "Harper Lee"
+    },
+    {
+        "ISBN": "22",
+        "title": "you can update here",
+        "price": 22,
+        "author": "Rattanak"
+    }
+]
