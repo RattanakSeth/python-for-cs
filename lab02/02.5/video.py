@@ -5,3 +5,12 @@ class Video:
         self.uploader = uploader
         self.length = length
         self.type = type
+
+    def to_dict(self):
+        return {
+            "title": self.title,
+            "singer": self.singer,
+            "uploader": self.uploader,
+            "length": self.length,
+            "type": self.type
+        }

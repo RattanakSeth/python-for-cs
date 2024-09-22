@@ -16,7 +16,7 @@ class Menu:
         department = input("Department:")
         student = Student(id, name, age, department)
         self.students.append(student)
-        self.studentService.write_students_to_json([student])
+        self.studentService.write_students_to_json(self.students)
         print("A student is added to the list\n")
 
     def student_lists(self):
@@ -37,6 +37,7 @@ class Menu:
             for idx, stu in enumerate(self.students):
                 if (stu.id == id):
                     del self.students[idx]
+                    self.studentService.write_students_to_json(self.students)
                     # should remove from json as well
                     print("The following student has been deleted")
                     print("| {:<6} | {:<14} | {:<4} |".format(stu.id, stu.name, stu.age, stu.department))
@@ -47,6 +48,9 @@ class Menu:
                 continue
             else: break
 
+    def view_departments(self):
+        print("Department will use inside department due ot json format")
+
 
 menu = Menu()
 
@@ -55,7 +59,9 @@ while True:
     print("1. View all students")
     print("2. Add a new student")
     print("3. Delete a students")
-    print("4. Quit\n")
+    print("4. Add Department")
+    print("5. View Departments")
+    print("6. Quit\n")
 
     option: int = int(input("Choose an option:"))
 
@@ -70,6 +76,13 @@ while True:
             menu.delete_student()
             continue
         case 4:
+            print("Please use existing data input, System do not allow to input dep..\n")
+            print("TODO next for data ref")
+            continue
+        case 5:
+            menu.view_departments()
+            continue
+        case 6:
             break
         case _:
             print("Incorrect Input please choose the right one!")

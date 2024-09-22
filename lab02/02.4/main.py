@@ -1,39 +1,40 @@
 from book import Book
-
+from services import write_to_json, read_from_json
 class Menu:
     def __init__(self) -> None:
-        self.books: list(Book) = [
-            Book(
-                ISBN="0671027034",
-                title="How to Win Friends & Influence People",
-                price=10.29,
-                author="Dale Carnegie"
-            ),
-            Book(
-                ISBN="0743273567",
-                title="The Great Gatsby",
-                price=15.99,
-                author="F. Scott Fitzgerald"
-            ),
-            Book(
-                ISBN="0451524934",
-                title="1984",
-                price=9.99,
-                author="George Orwell"
-            ),
-            Book(
-                ISBN="0316769487",
-                title="The Catcher in the Rye",
-                price=12.49,
-                author="J.D. Salinger"
-            ),
-            Book(
-                ISBN="0061120081",
-                title="To Kill a Mockingbird",
-                price=14.99,
-                author="Harper Lee"
-            )
-        ]
+        self.books: list(Book) = read_from_json()
+        # [
+        #     Book(
+        #         ISBN="0671027034",
+        #         title="How to Win Friends & Influence People",
+        #         price=10.29,
+        #         author="Dale Carnegie"
+        #     ),
+        #     Book(
+        #         ISBN="0743273567",
+        #         title="The Great Gatsby",
+        #         price=15.99,
+        #         author="F. Scott Fitzgerald"
+        #     ),
+        #     Book(
+        #         ISBN="0451524934",
+        #         title="1984",
+        #         price=9.99,
+        #         author="George Orwell"
+        #     ),
+        #     Book(
+        #         ISBN="0316769487",
+        #         title="The Catcher in the Rye",
+        #         price=12.49,
+        #         author="J.D. Salinger"
+        #     ),
+        #     Book(
+        #         ISBN="0061120081",
+        #         title="To Kill a Mockingbird",
+        #         price=14.99,
+        #         author="Harper Lee"
+        #     )
+        # ]
 
 
     def book_lists(self):
@@ -53,6 +54,7 @@ class Menu:
         price: int = int(input("Price:"))
         author: int = str(input("Author:"))
         self.books.append(Book(ISBN, title, price, author))
+        write_to_json(self.books)
         print("A book is added to the list\n")
 
     def update_book(self):
@@ -70,6 +72,7 @@ class Menu:
                     author: str = input(f"Author [{book.author}]: ") or book.author
 
                     self.books[idx].set(ISBN, title, price, author)
+                    write_to_json(self.books)
                     isUpdated = True
                     print("Book has been updated successfully")
                     break

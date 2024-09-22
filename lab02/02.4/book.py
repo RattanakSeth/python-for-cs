@@ -20,4 +20,12 @@ class Book:
         print("| {:<3} | {:<10} | {:<32} | {:<7.2f} | {:<14} |".format(1, self.ISBN, self.title, self.price, self.author))
         print("======================================================================\n")
 
+    def to_dict(self):
+        return {
+            "ISBN": self.ISBN,
+            "title": self.title,
+            "price": self.price,
+            "author": self.author
+        }
+
         

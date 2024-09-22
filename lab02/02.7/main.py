@@ -13,7 +13,7 @@ class Menu:
         singer = input("Singer:")
         length = input("Length:")
         price = input("Price:")
-        albumId = input("AlbumId:")
+        albumId: int = int(input("AlbumId:"))
 
         self.store.createSong(name=title, singer=singer, length=length, price=price, albumId=albumId)
 

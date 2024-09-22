@@ -4,7 +4,7 @@ class Student:
         self.id = id
         self.name = name
         self.age = age
-        if(isinstance(department, str)): self.department = Department(name=department)
+        if(isinstance(department, str)): self.department = Department(name=department) # it should ref id like db...
         else: self.department = Department(**department)
         
         print("id: ", id)

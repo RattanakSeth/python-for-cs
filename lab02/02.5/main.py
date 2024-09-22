@@ -1,13 +1,15 @@
 from video import Video
 import re
+from services import write_to_json, read_from_json
 
 class Menu:
     def __init__(self) -> None:
-        self.videos: list(Video) = [
-            Video("Prey Eh Kert", "sin sisamuth", "Rattanak", 110, "mp4"),
-            Video("Pel Del Trov Yum", "sin sisamuth", "Rattanak", 110, "mp4"),
-            Video("Luoch Sneh Luoch Tuk", "sin sisamuth", "Rattanak", 110, "mp4"),
-        ]
+        self.videos: list(Video) = read_from_json()
+        # [
+        #     Video("Prey Eh Kert", "sin sisamuth", "Rattanak", 110, "mp4"),
+        #     Video("Pel Del Trov Yum", "sin sisamuth", "Rattanak", 110, "mp4"),
+        #     Video("Luoch Sneh Luoch Tuk", "sin sisamuth", "Rattanak", 110, "mp4"),
+        # ]
 
 
     def create_video(self):
@@ -20,6 +22,7 @@ class Menu:
         type = input("Type:")
     
         self.videos.append(Video(title, singer, uploader, length, type))
+        write_to_json(self.videos)
         print("A video is added to the list\n")
 
     def video_lists(self):
