@@ -1,10 +1,11 @@
-# Python for computer science course
-### CADT, IDT, MCS
-Lectured by: Kak Soky
-Student's name: Seth Rattank
+# Python for data science course
+### CADT, IDT, M-CS
+Lectured by: Kak Soky <br>
+Student's name: Seth Rattanak <br>
+Nine week lecture
 
 ### Repository
-https://github.com/RattanakSeth/python-for-cs
+https://github.com/RattanakSeth
 
 ### Lab02
 

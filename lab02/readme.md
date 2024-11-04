@@ -3,4 +3,4 @@
 
 # Lab03 Continue and write to json file
 
-Original Wrote by: Rattanak SETH
+Original written by: Rattanak SETH
