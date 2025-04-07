@@ -1,8 +1,11 @@
 # Python for data science course
 ### CADT, IDT, M-CS
-Lectured by: Kak Soky <br>
+Lectured by: Dr Kak Soky <br>
 Student's name: Seth Rattanak <br>
 Nine week lecture
+
+## Advanced Data Science
+Lectured by: PHAUK Sokkey, PhD
 
 ### Repository
 https://github.com/RattanakSeth
