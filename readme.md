@@ -1,11 +1,11 @@
 # Python for data science course
-### CADT, IDT, M-CS
+### CADT, IDT, MSc in AI and Data Science
 Lectured by: Dr Kak Soky <br>
 Student's name: Seth Rattanak <br>
 Nine week lecture
 
 ## Advanced Data Science
-Lectured by: PHAUK Sokkey, PhD
+Lectured by: PHAUK Sokkhey, PhD
 
 ### Repository
 https://github.com/RattanakSeth
@@ -27,3 +27,6 @@ source .venv/bin/activate
 ```
 pip install Scrapy
 ```
+
+### Note
+I uses mini conda as a global environment to run this project.
