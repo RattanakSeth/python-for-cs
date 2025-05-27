@@ -4,3 +4,6 @@ __pycache__
 .idea
 
 advanced_data_science/final_project/data/*
+
+# model file
+*.pkl

@@ -28,5 +28,7 @@ source .venv/bin/activate
 pip install Scrapy
 ```
 
+More lib, please explore by yourself
+
 ### Note
 I uses mini conda as a global environment to run this project.
